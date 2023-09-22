@@ -1,27 +1,34 @@
 import React, { useState } from "react";
 import TodoItem from "./TodoItem";
 const Todos = () => {
-  let list = [
-    "wash clothes",
-    "clean house",
-    "do homework",
-    "charge phone",
-    "go to gym",
-    "boil eggs",
-  ];
+  // let list = [
+  //   "wash clothes",
+  //   "clean house",
+  //   "do homework",
+  //   "charge phone",
+  //   "go to gym",
+  //   "boil eggs",
+  // ];
+  
+  const [todo, setTodo] = useState(['item1','item2']);
+  const [newTodo, setNewTodo] = useState('')
+
+  // useEffect(() => {
+  //   alert('new todo added')
+  // }, [todo])
+  
+
   const addNewTodo = ()=>{
     if(newTodo.length===0)
     alert('bhai kuch to likh le')
   else
-    setTodo([...todo, newTodo ])
+    setTodo([...todo,newTodo])
   }
 
-  const [todo, setTodo] = useState([]);
-  const [newTodo, setNewTodo] = useState('')
   return (
     <div className="container my-4 flex " style={{ minHeight: "75vh" }}>
       <div>
-        <h4>Add your todo</h4>
+        <h4>Add your todo here :</h4>
         <textarea
           type="textarea"
           name="addTodo"

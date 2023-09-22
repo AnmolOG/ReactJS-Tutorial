@@ -1,18 +1,25 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Header = (props) => {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
     <div className="container-fluid">
-      <a className="navbar-brand" href="/">{props.title}</a>
+      <Link className="navbar-brand"to="/">{props.title}</Link>
       
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
           <li className="nav-item">
-            <a className="nav-link active" aria-current="page" href="/">Home</a>
+            <Link className="nav-link active" aria-current="page" to="/">Home</Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link active" aria-current="page" href="/">About</a>
+            <Link className="nav-link active" aria-current="page"to="/about">About</Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link active" aria-current="page"to="/contact">contact us</Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link active" aria-current="page"to="/login">login/signup</Link>
           </li>
          
         </ul>
